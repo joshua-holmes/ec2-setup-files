@@ -1,0 +1,11 @@
+[Unit]
+Description=Game init via docker
+After=default.target
+
+[Service]
+ExecStart=docker-compose --project-directory /home/admin/game/ up
+Type=exec
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
