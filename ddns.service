@@ -1,0 +1,11 @@
+[Unit]
+Description=Cloudflare DDNS
+After=default.target
+
+[Service]
+ExecStart=cloudflare-ddns
+Type=oneshot
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
